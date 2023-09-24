@@ -1,6 +1,6 @@
-# framework
-[![Build Framework](https://github.com/ublue-os/framework/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/framework/actions/workflows/build.yml)
+# Legion
+[![Build Legion](https://github.com/ublue-os/legion/actions/workflows/build.yml/badge.svg)](https://github.com/ublue-os/legion/actions/workflows/build.yml)
 
-Images for Framework Laptops.
+Work-in-progress images for Lenovo Legion devices.
 
 - [Current Documentation](https://universal-blue.org/images/framework)

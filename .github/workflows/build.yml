@@ -1,4 +1,4 @@
-name: Build Framework
+name: Legion Go Go Gadget!
 on:
   schedule:
     - cron: '00 09 * * *'  # 9:00am everyday
@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         image_flavor: [-main]
-        base_name: [framework]
+        base_name: [legion]
         base_image_name:
           - silverblue
           - kinoite
@@ -78,9 +78,9 @@ jobs:
           fi
           if [[ "${{ matrix.base_image_name }}" =~ "bazzite-deck" ]]; then
               if [[ "${{ matrix.base_image_name }}" =~ "gnome" ]]; then
-                  echo "IMAGE_NAME=bazzite-framegame-gnome" >> $GITHUB_ENV
+                  echo "IMAGE_NAME=bazzite-go-gnome" >> $GITHUB_ENV
               else
-                  echo "IMAGE_NAME=bazzite-framegame" >> $GITHUB_ENV
+                  echo "IMAGE_NAME=bazzite-go" >> $GITHUB_ENV
               fi
           elif [[ "${{ matrix.image_flavor }}" =~ "main" ]]; then
               echo "IMAGE_NAME=${{ format('{0}-{1}', matrix.base_image_name, matrix.base_name) }}" >> $GITHUB_ENV
@@ -145,7 +145,7 @@ jobs:
           labels: |
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
             org.opencontainers.image.version=${{ steps.labels.outputs.VERSION }}
-            org.opencontainers.image.description=Framework is an OCI image derived from Universal Blue that serves as an operating system for Framework laptops.
+            org.opencontainers.image.description=Legion is an OCI image derived from Universal Blue that serves as an operating system for Lenovo Legion devices.
 
       # Build the image using Buildah action
       - name: Build image
