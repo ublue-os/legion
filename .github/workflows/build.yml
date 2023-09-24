@@ -1,7 +1,7 @@
 name: Legion Go Go Gadget!
 on:
   schedule:
-    - cron: '00 09 * * *'  # 9:00am everyday
+    - cron: '45 09 * * *'  # 9:45am everyday
   push:
     branches:
       - main
